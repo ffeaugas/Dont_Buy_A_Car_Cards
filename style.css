@@ -12,37 +12,106 @@ body {
 }
 
 .parent {
-    height: 80%;
-    width: 95%;
-    border-radius: 10px;
+    height: 60%;
+    max-height: 600px;
+    border-radius: 7px;
     display: flex;
     flex-direction: row;
     align-items: stretch;
     overflow: hidden;
+    /* position: relative; */
+}
+
+@media screen and (max-width: 1150px) {
+    html {
+        height: 170%;
+    }
+    .parent {
+        flex-direction: column;
+        max-width: 350px;
+        height: 90%;
+        width: 80%;
+        max-height: 1800px;
+    }
+    .car1, .car2, .car3 {
+        flex: 1;
+        /* min-height: 300px; */
+    }
 }
 
 .car1, .car2, .car3 {
-    flex-grow: 1;
+    flex: 1;
+    /* max-width: 350px; */
+    position: relative;
 }
 
 .car1 {
-
     background-color: hsl(31, 77%, 52%);
 }
 
 .car2 {
-
     background-color: hsl(184, 100%, 22%);
 }
 
 .car3 {
-
     background-color: hsl(179, 100%, 13%);
 }
 
-@media screen and (max-width: 1150px) {
-    .parent {
-        flex-direction: column;
-        max-width: 350px;
-    }
+img, h1, p, input {
+    margin: 40px 40px 0px 40px;
+}
+
+h1 {
+    font-family: 'Big Shoulders Display', cursive;
+    color: hsl(0, 0%, 95%);
+}
+
+p {
+    font-family: 'Lexend Deca', sans-serif;
+    color: hsla(0, 0%, 100%, 0.75);
+}
+
+input {
+    position: absolute;
+    bottom: 10%;
+    background-color: #fff;
+    border-radius: 24px;
+    border-color: #fff;
+    border-style: solid;
+    box-sizing: border-box;
+    cursor: pointer;
+    font-family: 'Lexend Deca', sans-serif;
+    font-size: 0.9em;
+    font-weight: 500;
+    height: 48px;
+    justify-content: center;
+    letter-spacing: .25px;
+    max-width: 100%;
+    padding: 2px 24px;
+    text-align: center;
+    width: auto;
+    transition: all .3s;
+}
+
+input:hover {
+    background: none;
+    border-color: #fff;
+    color: #fff;
+}
+
+input:active {
+    border-color: rgb(150, 150, 150);
+    color: rgb(150, 150, 150);
+}
+
+.input1 {
+    color: hsl(31, 77%, 52%);
+}
+
+.input2 {
+    color: hsl(184, 100%, 22%);
+}
+
+.input3 {
+    color: hsl(179, 100%, 13%);
 }
