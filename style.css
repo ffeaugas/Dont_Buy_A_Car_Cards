@@ -1,0 +1,48 @@
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
+body {
+    margin: 50px;
+    background-color: hsl(0, 0%, 95%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.parent {
+    height: 80%;
+    width: 95%;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+    overflow: hidden;
+}
+
+.car1, .car2, .car3 {
+    flex-grow: 1;
+}
+
+.car1 {
+
+    background-color: hsl(31, 77%, 52%);
+}
+
+.car2 {
+
+    background-color: hsl(184, 100%, 22%);
+}
+
+.car3 {
+
+    background-color: hsl(179, 100%, 13%);
+}
+
+@media screen and (max-width: 1150px) {
+    .parent {
+        flex-direction: column;
+        max-width: 350px;
+    }
+}
