@@ -19,7 +19,6 @@ body {
     flex-direction: row;
     align-items: stretch;
     overflow: hidden;
-    /* position: relative; */
 }
 
 @media screen and (max-width: 1150px) {
@@ -35,13 +34,12 @@ body {
     }
     .car1, .car2, .car3 {
         flex: 1;
-        /* min-height: 300px; */
     }
 }
 
 .car1, .car2, .car3 {
     flex: 1;
-    /* max-width: 350px; */
+    max-width: 350px;
     position: relative;
 }
 
